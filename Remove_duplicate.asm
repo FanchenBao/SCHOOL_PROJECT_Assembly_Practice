@@ -23,8 +23,8 @@ StopWDT     mov.w   #WDTPW|WDTHOLD,&WDTCTL  ; Stop watchdog timer
 ;-------------------------------------------------------------------------------
 ; Main loop here
 ;-------------------------------------------------------------------------------
-LIST_IN		.set	0x0200			;Memory allocation 	LIST_IN
-LIST_OUT	.set	0x0214			;Memory allocation 	LIST_OUT
+LIST_IN		.set	0x0200			;Memory allocation LIST_IN for original array
+LIST_OUT	.set	0x0214			;Memory allocation LIST_OUT for processed unique-element array
 			mov.w	#LIST_IN, R4
 			mov.w	#6, 0(R4)
 			mov.w	#1, 2(R4)
